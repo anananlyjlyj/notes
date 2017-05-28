@@ -329,7 +329,7 @@
    Falls dies für beide differentiellen Zwänge ginge, wäre unser System doch *holonom*. (beziehungsweise "integrierbar").
    Aber im konkreten Fall geht das *nicht*.
    #+begin_proof latex
-   per Widerspruch: Wenn es ginge, könnten wir nach $φ$ auflösen $⇒ φ = /(x^1, x^2, θ)$. Dies ist unmöglich,
+   per Widerspruch: Wenn es ginge, könnten wir nach $φ$ auflösen $⇒ φ = φ(x^1, x^2, θ)$. Dies ist unmöglich,
    weil man durch "Rollen im Kreis" beliebiges $φ$ zu vorgegebenen $x^1, x^2, θ$ erreichen kann.
    #+end_proof
 ** Prinzip der virtuellen Arbeit und "D'Alembert"
@@ -394,13 +394,13 @@
    0 &= \sum_{m}(Q_m - (\dd{}{t}\pp{}{\dot q_m} - \pp{}{q_m})T)δ q_m \\
    \end{align*}
    $δ q_m$ unabhängig! $⇒$ jeder der Klammer-Ausdrücke verschwindet getrennt.
-   $⇒ 3d -d$ Differentialgleichungen 2. Ordnung $⇒$ Problem prinzipiell gelöst.
+   $⇒ 3N -d$ Differentialgleichungen 2. Ordnung $⇒$ Problem prinzipiell gelöst.
 ** Lagrange-Gleichungen 1. Art
    Jetzt *zusätzlich* $p$ nichtholomome (differentielle) Zwänge.
    \[α = 1, \dots, p: \sum_{m} f_m^α dq_m + f_t^α \d t = 0\]
    $f_m^α$ sind Funktionen der $q_m, t$. Wir wollen mit Vektoren in $ℝ^{3N - d}$ arbeiten:
    \[δ\v q := \{δ_m\}, \v f^α := \{f_m^α\}, \v p := \{Q_M - (\dd{}{t}\pp{}{\dot q_m} - \pp{}{q_m})T\}\]
-   Bedindung für virtuelle Verrückung:
+   Bedingung für virtuelle Verrückung:
    \[\sum_{m} f_m^α δq_m = 0 ⇔ \v f^α δ\v q = 0\]
    Sei $\Span\{\v f^α\}$ der von dem $\v f^α$ aufgespannte lineare Unterraum von $ℝ^{3N - d}$.
    Sei $\Span\{\v f^α\}_{\perp}$ das orthogonale Komplement. $⇒$ Zwänge $δ\v q ∈ \Span \{\v f^α\}_{\perp}$.
@@ -428,13 +428,13 @@
    \end{align*}
    $m = 1, \dots, 3N, m_1 = m_2 = m_3, etc$
 ** Lagrange-Gleichungen 2. Art
-   Betrachte System wie in 5.4 mit verallgemeinerten Koordinaten $q_m$ und *ohne* nichtholonome Zwänge. Seien die äußeren Kräfte konservatir: $\v F_a = - \v ∇_a V(\v x_1, \dots, \v x_N)$
+   Betrachte System wie in 5.4 mit verallgemeinerten Koordinaten $q_m$ und *ohne* nichtholonome Zwänge. Seien die äußeren Kräfte konservativ: $\v F_a = - \v ∇_a V(\v x_1, \dots, \v x_N)$
    $\v ∇_a$: Gradient bezüglich $\v x_a$
    \begin{align*}
    ⇒ Q_m &= \sum_{a} \v F_a \pp{\v x_a}{q_m} = -\sum_{a} (\v ∇_a V)\pp{\v x_a}{q_m} = -\pp{V}{q_m} \\
    &= (\dd{}{t} \pp{}{\dot q_m} - \pp{}{q_m})V \\
    \intertext{D'Alembert sagt:}
-   Q_m - (\dd{}{t} \pp{}{\dot q_m} - \pp{q_m}{})T &= 0 \\
+   Q_m - (\dd{}{t} \pp{}{\dot q_m} - \pp{}{q_m})T &= 0 \\
    ⇒ (\dd{}{t}\pp{}{\dot q_m} - \pp{}{q_m})V - (\dd{}{t}\pp{}{\dot q_m} - \pp{}{q_m})T &= 0 \\
    \string(\dd{}{t}\pp{}{\dot q_m} - \pp{}{q_m}\string)(V - T) &= 0 \\
    \string(\dd{}{t}\pp{}{\dot q_m} - \pp{}{q_m}\string)(L) &= 0 \\
